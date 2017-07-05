@@ -3,7 +3,7 @@
   <div class="content-warpper">
   <div v-if="seller.supports" class="support-count" @click="showDetail">
       <span class="count">{{seller.supports.length}}个</span>
-      <i class="icon-thumb_up"></i>
+      <i class="icon-keyboard_arrow_right"></i>
     </div>  
     <div class="avatar">
       <img :src="seller.avatar" width="64" height="64" alt="">
@@ -24,13 +24,21 @@
     </div>
   </div>
   <div class="bulletin-warpper">
-    <span class="bulletin-title"></span><span class="bulletin-text">{{seller.bulletin}}</span><i class="icon-thumb_up"></i>
+    <span class="bulletin-title"></span><span class="bulletin-text">{{seller.bulletin}}</span><i class="icon-keyboard_arrow_right"></i>
   </div>
   <div class="background" >
     <img :src="seller.avatar" width="100%" height="100%" >
   </div>
   <div class="detail" v-show="detailShow">
-    
+    <div class="detail-wrapper clearfix">
+      <div class="detail-main">
+        <h1 class="name">{{seller.name}}</h1>
+              
+      </div>
+    </div>
+    <div class="detail-close">
+      <i class="icon-close"></i>
+    </div>
   </div>
 </div>
  
